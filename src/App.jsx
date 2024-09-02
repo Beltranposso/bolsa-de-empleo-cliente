@@ -52,7 +52,7 @@ function App() {
                 <p>Notificaciones</p>
               </button>
               {isNotificationsOpen && (
-                <div className="fixed top-20 right-10 w-80 bg-white border border-gray-300 shadow-lg rounded-lg z-50 p-4">
+                <div className="fixed top-20 right-80 w-80 bg-white border border-gray-300 shadow-lg rounded-lg z-50 p-4">
                   <h3 className="text-lg font-bold mb-2">Notifications</h3>
                   <p className="text-sm text-gray-500 mb-4">You have {unreadNotifications.length} unread messages.</p>
                   <div className="flex items-center mb-4">
