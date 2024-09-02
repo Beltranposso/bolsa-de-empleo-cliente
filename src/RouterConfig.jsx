@@ -1,5 +1,4 @@
-
-import{ Empleos, Home} from './pages'
+import{ Empleos, Home, Notificaciones, } from './pages'
 
 export const  routes = [
 {
@@ -9,5 +8,11 @@ export const  routes = [
 {
    path: '/Empleos',
    component: <Empleos></Empleos>
-}
+},
+{
+    path: '/Notificaciones',
+    component: <Notificaciones></Notificaciones>
+ },
+ 
+
 ]
