@@ -1,8 +1,12 @@
-
+import Share from "./SectionShare/Share"
+import ListEmpleos from "./SectionListEmpleos/ListEmpleos"
+import InfoEmpleo from "./InfoEmpleo/InfoEmpleo"
 const Empleos = ()=>{
     return (
-        <div className="h-full w-full flex justify-center items-center  bg-emerald-300">
-            <h1>Empleos</h1>
+        <div className=" w-full h-full pt-5 grid grid-cols-la  gap-2 ">
+            <Share></Share>
+            <ListEmpleos></ListEmpleos>
+            <InfoEmpleo></InfoEmpleo>
         </div>
     )
 }
