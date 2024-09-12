@@ -70,10 +70,17 @@ function App() {
             </Link>
           </div>
         </div>
-        <div className="absolute top-3 right-3">
+        <div className="absolute top-3 right-28">
           <Link to="/login" className="flex flex-col items-center">
             <button className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600">
               Login
+            </button>
+          </Link>
+        </div>
+        <div className="absolute top-3 right-1">
+          <Link to="/SignUp" className="flex flex-col items-center">
+            <button className="bg-gray-300 text-white px-6 py-2 rounded-md hover:bg-gray-600">
+              Sign Up
             </button>
           </Link>
         </div>

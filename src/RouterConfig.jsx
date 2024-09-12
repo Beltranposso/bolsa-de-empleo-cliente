@@ -1,4 +1,4 @@
-import { Empleos, Home, Login} from "./pages";
+import { Empleos, Home, Login, SignUp} from "./pages";
 
 export const routes = [
   {
@@ -13,4 +13,8 @@ export const routes = [
     path: "/Login",
     component: <Login></Login>,
   },
+  {
+    path: "/SignUp",
+    component: <SignUp></SignUp>
+  }
 ];
