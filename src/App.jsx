@@ -1,9 +1,7 @@
-import { useState } from 'react'
+
 import { BrowserRouter,Link,Routes,Route } from 'react-router-dom'
 import {routes} from './RouterConfig'
 import './app.css'
-
-
 
 function App() {
 
@@ -11,7 +9,7 @@ function App() {
   return (
     < BrowserRouter >
  
- <div className='h-full'>
+ <div className='h-screen bg-indigo-50 snap-x overflow-auto'>
   <div className=' h-16 bg-slate-50 flex justify-center border-2 items-center '>
     <div className='flex gap-12'>
         <Link to='/Home' className='flex flex-col items-center text-gray-500 hover:text-black' >
@@ -43,7 +41,7 @@ function App() {
         </Link>
     </div>
   </div>
-  <div className='flex justify-center items-center h-screen bg-cyan-50'>
+  <div className='flex  flex-col justify-center items-center h-full '>
     {
      <Routes>
        {routes.map((route, index) => (
@@ -51,7 +49,9 @@ function App() {
        ))}
      </Routes>
     }
+
   </div>
+
   </div>
   </BrowserRouter>
   )
