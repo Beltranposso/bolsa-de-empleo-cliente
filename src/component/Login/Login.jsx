@@ -10,7 +10,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-between">
+    <div className=" w-full  bg-gray-100 flex flex-col justify-between">
       <div className="flex-grow flex items-center justify-center">
         <div className="bg-white p-8 rounded-lg shadow-md flex gap-4 items-center">
           <div class="flex justify-center items-center">

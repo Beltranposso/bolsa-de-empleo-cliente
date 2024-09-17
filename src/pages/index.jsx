@@ -2,7 +2,7 @@ import Home from "../component/home/Home";
 import Empleos from "../component/Empleos/Empleos";
 import Login from "../component/Login/Login";
 import SignUp from "../component/Register/SignUp";
-import React from "react";
+import React from 'react';
 export { Home, Empleos, Login, SignUp };
 
 const home = React.lazy(() => import("../component/home/Home"));

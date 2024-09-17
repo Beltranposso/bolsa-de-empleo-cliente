@@ -21,23 +21,6 @@ const ListEmpleos= ()=>{
                 ubicacion={"Colombia, Cartagena "} 
           >
                 </ContentE>
-         
-
-      
-       
-         
-      
-     
-    
-
-
-                
-
-                
-
-     
-
-
                 </main>
              </div>
         </div>

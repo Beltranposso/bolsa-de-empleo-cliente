@@ -1,14 +1,23 @@
 import { useState } from 'react'
 import { BrowserRouter,Link,Routes,Route } from 'react-router-dom'
 import {routes} from './RouterConfig'
+import { Button } from '@nextui-org/react'
 import './app.css'
 function App() {
   return (
     < BrowserRouter >
     
  <div className='h-full'>
-  <div className=' h-16 bg-slate-50 flex justify-center items-center '>
-    <div className='flex gap-12'>
+
+  <div className=' h-16 bg-slate-50 flex justify-center'>
+     <div className='w-[65%] bg-slate-300'>
+      Muy pronto 
+     </div>
+
+        <div className='flex w-full justify-between'>
+
+   
+    <div className='flex gap-12  '>
         <Link to='/Home' className='flex flex-col items-center' >
         <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-home">
   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -37,8 +46,16 @@ function App() {
 <p>Notificaciones</p>
         </Link>
     </div>
+    <div className='flex gap-5 justify-center items-center   mr-5'>
+      <Link className='flex justify-center items-center h-10 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600' to={'/Login'} >Iniciar Sesion</Link>
+      <Link className=' flex justify-center items-center h-10 bg-gray-300 text-white px-6 py-2 rounded-md hover:bg-gray-600' to={'/SignUp'} >Registrarse</Link>
+    </div>
+    </div>
   </div>
-  <div className='h-screen'>
+
+
+
+  <div className='flex justify-center items-center h-screen' >
     {
      <Routes>
        {routes.map((route, index) => (
