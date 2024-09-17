@@ -51,14 +51,14 @@ const Publicacion = () => {
             </main>
             <footer className="flex justify-center items-center h-20 ">
                 <div className="flex w-full justify-around border-2 items-center  bg-white h-10 gap-4 px-2 border-gray-300">
-                    <button className="flex justify-center w-full hover:bg-gray-200 rounded-md">
+                    <button className="flex justify-center w-full hover:bg-gray-200 rounded-md ">
 
                         <svg xmlns="http://www.w3.org/2000/svg" width={27} height={27} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-thumb-up">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M7 11v8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
                         </svg>
                     </button>
-                    <button className="flex justify-center w-full hover:bg-gray-200 rounded-md">
+                    <button className="flex justify-center w-full hover:bg-gray-200 rounded-md ">
                         <svg xmlns="http://www.w3.org/2000/svg" width={27} height={27} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-message-circle">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M3 20l1.3 -3.9c-2.324 -3.437 -1.426 -7.872 2.1 -10.374c3.526 -2.501 8.59 -2.296 11.845 .48c3.255 2.777 3.695 7.266 1.029 10.501c-2.666 3.235 -7.615 4.215 -11.574 2.293l-4.7 1" />

@@ -9,10 +9,10 @@ function App() {
   return (
     < BrowserRouter >
  
- <div className='h-screen bg-indigo-50 snap-x overflow-auto'>
+ <div className=' flex  flex-col h-screen bg-indigo-50 snap-x overflow-auto'>
   <div className=' h-16 bg-slate-50 flex justify-center border-2 items-center '>
     <div className='flex gap-12'>
-        <Link to='/Home' className='flex flex-col items-center text-gray-500 hover:text-black' >
+        <Link to='/Home' className='flex flex-col items-center text-gray-500 hover:text-black text-sm' >
         <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-home">
   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
@@ -21,7 +21,7 @@ function App() {
 </svg>
 <p>Home</p>
         </Link>
-        <Link to='/Empleos' className='flex flex-col text-gray-500 items-center hover:text-black'>
+        <Link to='/Empleos' className='flex flex-col text-gray-500 items-center hover:text-black text-sm'>
         <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-briefcase">
   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
@@ -31,7 +31,7 @@ function App() {
 </svg>
 <p>Empleos</p>
         </Link>
-        <Link  className='flex flex-col items-center text-gray-500 hover:text-black'>
+        <Link  className='flex flex-col items-center text-gray-500 hover:text-black text-sm'>
         <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-bell">
          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
          <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />

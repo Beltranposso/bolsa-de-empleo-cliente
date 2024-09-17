@@ -6,7 +6,7 @@ const ContentE = ({ Puesto, Empresa, ubicacion }) => {
   const styles = estado ? "bg-blue-100" : "";
 
   return (
-    <div className={`flex h-24 ${styles} cursor-pointer hover:bg-gray-100`}>
+    <div className={`flex h-24 ${styles} cursor-pointer hover:bg-gray-100 pl-2`}>
       <div className="w-24">
         <div className="bg-gray-400 w-14 h-14"></div>
       </div>
