@@ -1,28 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
+import Footer from "../Footer";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Login attempt", { email, password });
-  };
-
   return (
-    <div className=" w-full  bg-gray-100 flex flex-col justify-between">
+    <div className=" w-full flex flex-col justify-between">
       <div className="flex-grow flex items-center justify-center">
-        <div className="bg-white p-8 rounded-lg shadow-md flex gap-4 items-center">
-          <div class="flex justify-center items-center">
-            <div class="max-h-[300px] max-w-[300px]">
+        <div className="bg-white p-8 rounded-lg flex gap-4 items-center">
+          <div className="flex justify-center items-center">
+            <div className="max-h-[300px] max-w-[300px]">
               <img
                 src="/src/img/Untitled.png"
                 alt=""
-                class="h-full w-full object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
-          <div className="w-72">
+          <div className="w-72 bg-white p-8 shadow-md border-2 rounded-md items-center">
             <h2 className="text-2xl font-bold mb-6">Iniciar Sesion</h2>
             <form>
               <div className="mb-4">
@@ -101,13 +94,14 @@ const Login = () => {
                   type="button"
                   className="w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
-                  Registrarse
+                  Registrate
                 </button>
               </div>
             </form>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
