@@ -78,12 +78,6 @@ function App() {
               >
                 Iniciar Sesion
               </Link>
-              <Link
-                className=" flex justify-center items-center h-10 bg-gray-300 text-white px-6 py-2 rounded-md hover:bg-gray-600"
-                to={"/SignUp"}
-              >
-                Registrarse
-              </Link>
             </div>
           </div>
         </div>
