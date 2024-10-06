@@ -1,13 +1,24 @@
 import { useState } from "react";
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Link, Routes, Route, useLocation } from "react-router-dom";
 import { routes } from "./RouterConfig";
 import { Button } from "@nextui-org/react";
 import "./app.css";
+
 function App() {
   return (
     <BrowserRouter>
-      <div className="h-full">
-        <div className="h-16 bg-slate-50 flex ">
+      <Content />
+    </BrowserRouter>
+  );
+}
+
+function Content() {
+  const location = useLocation();
+
+  return (
+    <div className="h-full">
+      {location.pathname !== "/Login" && location.pathname !== "/SignUp" && (
+        <div className="h-16 bg-slate-50 flex">
           <div className="flex w-full items-center justify-center p-4">
             <div className="flex gap-12">
               <Link to="/Home" className="flex flex-col items-center">
@@ -73,29 +84,25 @@ function App() {
             </div>
             <div className="flex gap-5 absolute right-5">
               <Link
-                className="flex justify-center items-center h-10 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600"
                 to={"/Login"}
+                className="bg-gray-200 rounded-full shadow-inner text-gray-700 cursor-pointer text-lg py-2 px-6 transition-all duration-200 ease-in-out border-2 border-gray-300 hover:shadow-inner hover:shadow-gray-400 focus:outline-none focus:shadow-inner focus:shadow-gray-400"
               >
-                Iniciar Sesion
+                Iniciar Sesión
               </Link>
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center h-screen">
-          {
-            <Routes>
-              {routes.map((route, index) => (
-                <Route
-                  key={index}
-                  path={route.path}
-                  element={route.component}
-                />
-              ))}
-            </Routes>
-          }
-        </div>
+      )}
+      <div className="flex justify-center items-center h-screen">
+        {
+          <Routes>
+            {routes.map((route, index) => (
+              <Route key={index} path={route.path} element={route.component} />
+            ))}
+          </Routes>
+        }
       </div>
-    </BrowserRouter>
+    </div>
   );
 }
 

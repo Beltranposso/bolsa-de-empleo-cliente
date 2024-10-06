@@ -1,141 +1,154 @@
 import React, { useState } from "react";
-import Footer from "../Footer";
+import { Link } from "react-router-dom";
 
 function Register() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aquí realizarías la lógica para enviar los datos del formulario
-    console.log(formData);
-  };
-
+  const isFormValid =
+    firstName !== "" && lastName !== "" && email !== "" && password !== "";
   return (
-    <div className="min-h-screen flex flex-col justify-between">
-      <div className="flex-grow flex items-center justify-center">
-        <div className="bg-white p-8 rounded-lg flex gap-4 items-center">
-          <div className="flex justify-center items-center">
-            <div className="max-h-[300px] max-w-[300px]">
-              <img
-                src="/src/img/Untitled.png"
-                alt=""
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </div>
-          <div className="w-72 bg-white p-8 shadow-md border-2 rounded-md items-center">
-            <h2 className="text-2xl font-bold mb-6">Registrarse</h2>
-            <form>
-              <div className="mb-4">
-                <label
-                  htmlFor="gmail"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Nombre de Usuario
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 text-gray-400"
-                      fill="currentColor"
-                      viewBox="0 0 48 48"
-                    >
-                      <path d="M24 4A10 10 0 1024 24 10 10 0 1024 4zM36.021 28H11.979C9.785 28 8 29.785 8 31.979V33.5c0 3.312 1.885 6.176 5.307 8.063C16.154 43.135 19.952 44 24 44c7.706 0 16-3.286 16-10.5v-1.521C40 29.785 38.215 28 36.021 28z">
+    <div className="flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
+      <div className="w-full px-6 py-8 md:px-8 lg:w-1/2">
+        <div className="flex justify-center mx-auto">
+          <img className="w-auto h-7 sm:h-8" src="" alt="Logo" />
+        </div>
 
-                      </path>
-                    </svg>
-                  </div>
-                  <input
-                    id="nameUser"
-                    name="nameUser"
-                    type="text"
-                    required
-                    className="bg-gray-300 pl-10 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                  />
-                </div>
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="gmail"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Gmail
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg
-                      className="h-5 w-5 text-gray-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
-                  </div>
-                  <input
-                    id="gmail"
-                    name="gmail"
-                    type="email"
-                    required
-                    className="bg-gray-300 pl-10 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                  />
-                </div>
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Password
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg
-                      className="h-5 w-5 text-gray-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    required
-                    className="bg-gray-300 pl-10 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                  />
-                </div>
-              </div>
-              <div className="flex space-x-4 justify-center p-2">
-                <button
-                  type="submit"
-                  className="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Iniciar
-                </button>
-              </div>
-            </form>
+        <p className="mt-3 text-xl text-center text-gray-600 dark:text-gray-200">
+          Create your account!
+        </p>
+
+        <div className="mt-4">
+          <label
+            className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
+            htmlFor="signUpFirstName"
+          >
+            First Name
+          </label>
+          <input
+            id="signUpFirstName"
+            className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
+            type="text"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+        </div>
+
+        <div className="mt-4">
+          <label
+            className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
+            htmlFor="signUpLastName"
+          >
+            Last Name
+          </label>
+          <input
+            id="signUpLastName"
+            className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
+            type="text"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
+        </div>
+
+        <div className="mt-4">
+          <label
+            className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
+            htmlFor="signUpEmailAddress"
+          >
+            Email Address
+          </label>
+          <input
+            id="signUpEmailAddress"
+            className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+
+        <div className="mt-4">
+          <label
+            className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
+            htmlFor="signUpPassword"
+          >
+            Password
+          </label>
+          <input
+            id="signUpPassword"
+            className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+
+        <a
+          href="#"
+          class="flex items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
+        >
+          <div class="px-4 py-2">
+            <svg class="w-6 h-6" viewBox="0 0 40 40">
+              <path
+                d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z"
+                fill="#FFC107"
+              />
+              <path
+                d="M5.25497 12.2425L10.7308 16.2583C12.2125 12.59 15.8008 9.99999 20 9.99999C22.5491 9.99999 24.8683 10.9617 26.6341 12.5325L31.3483 7.81833C28.3716 5.04416 24.39 3.33333 20 3.33333C13.5983 3.33333 8.04663 6.94749 5.25497 12.2425Z"
+                fill="#FF3D00"
+              />
+              <path
+                d="M20 36.6667C24.305 36.6667 28.2167 35.0192 31.1742 32.34L26.0159 27.975C24.3425 29.2425 22.2625 30 20 30C15.665 30 11.9842 27.2359 10.5975 23.3784L5.16254 27.5659C7.92087 32.9634 13.5225 36.6667 20 36.6667Z"
+                fill="#4CAF50"
+              />
+              <path
+                d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.7592 25.1975 27.56 26.805 26.0133 27.9758C26.0142 27.975 26.015 27.975 26.0158 27.9742L31.1742 32.3392C30.8092 32.6708 36.6667 28.3333 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z"
+                fill="#1976D2"
+              />
+            </svg>
           </div>
+
+          <span class="w-5/6 px-4 py-3 font-bold text-center">
+            Sign in with Google
+          </span>
+        </a>
+
+        <div className="mt-6">
+          <Link
+            to="/Home"
+            className={`block w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-lg text-center ${
+              isFormValid
+                ? "bg-gray-800 hover:bg-gray-700"
+                : "bg-gray-400 cursor-not-allowed"
+            }`}
+            style={{ pointerEvents: isFormValid ? "auto" : "none" }}
+          >
+            Sign Up
+          </Link>
+        </div>
+
+        <div className="flex items-center justify-between mt-4">
+          <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
+
+          <Link
+            to="/Login"
+            className="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline"
+          >
+            Already have an account? Sign in
+          </Link>
+
+          <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
         </div>
       </div>
-      <Footer />
+
+      <div
+        className="hidden bg-cover lg:block lg:w-1/2"
+        style={{
+          backgroundImage:
+            "url(src/img/img3.svg)",
+        }}
+      ></div>
     </div>
   );
 }
