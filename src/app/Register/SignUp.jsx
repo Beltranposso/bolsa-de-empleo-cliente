@@ -1,3 +1,4 @@
+import { div } from "framer-motion/client";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -10,7 +11,8 @@ function Register() {
   const isFormValid =
     firstName !== "" && lastName !== "" && email !== "" && password !== "";
   return (
-    <div className="flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
+    <div className="flex h-screen w-full items-center">
+    <div className="flex  w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
       <div className="w-full px-6 py-8 md:px-8 lg:w-1/2">
         <div className="flex justify-center mx-auto">
           <img className="w-auto h-7 sm:h-8" src="" alt="Logo" />
@@ -110,7 +112,7 @@ function Register() {
           </div>
 
           <span class="w-5/6 px-4 py-3 font-bold text-center">
-            Sign in with Google
+            Registrate con Google
           </span>
         </a>
 
@@ -135,7 +137,7 @@ function Register() {
             to="/Login"
             className="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline"
           >
-            Already have an account? Sign in
+           Ya tienes un acuenta ?
           </Link>
 
           <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
@@ -143,13 +145,11 @@ function Register() {
       </div>
 
       <div
-        className="hidden bg-cover lg:block lg:w-1/2"
-        style={{
-          backgroundImage:
-            "url(src/img/img3.svg)",
-        }}
-      ></div>
+        className="hidden bg-cover px-2 lg:block lg:w-1/2">
+            <img className="h-full" src="src/assets/img/img3.svg" alt="" />
+      </div>
     </div>
+  </div>
   );
 }
 

@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+
 
 // tailwind.config.js
 import { nextui } from "@nextui-org/react";
@@ -7,7 +7,7 @@ import { nextui } from "@nextui-org/react";
 export const content = [
   "./index.html",
   "./src/**/*.{js,ts,jsx,tsx}",
-  "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+  "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
 ];
 export const theme = {
   extend: {
@@ -32,4 +32,3 @@ export const theme = {
 };
 export const darkMode = "class";
 export const plugins = [nextui()];
-

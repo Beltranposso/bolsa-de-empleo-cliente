@@ -1,3 +1,5 @@
+
+import { div } from "framer-motion/client";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -8,14 +10,13 @@ const Login = () => {
   const isFormValid = email !== "" && password !== "";
 
   return (
-    <div className="flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
+    <div className="flex h-screen w-full items-center">
+     <div className="flex w-full h-5/6 max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-5xl">
       <div
-        className="hidden bg-cover lg:block lg:w-1/2"
-        style={{
-          backgroundImage:
-            "url(src/img/img1.svg)",
-        }}
+        className="hidden bg-no-repeat  lg:block lg:w-1/2"
+       
       >
+        <img className="h-full" src="src/assets/img/img1.svg" alt="" />
       </div>
 
       <div className="w-full px-6 py-8 md:px-8 lg:w-1/2">
@@ -135,7 +136,9 @@ const Login = () => {
           <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
         </div>
       </div>
+    </div> 
     </div>
+   
   );
 };
 
