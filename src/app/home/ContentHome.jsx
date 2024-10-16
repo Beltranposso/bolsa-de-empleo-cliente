@@ -1,14 +1,14 @@
-import Content from './Content/Contet'
+
 import Publicaciones from './Publicaciones/Publicaciones'
 import Sugerencias from './Sugerencias/Sugerencias'
 import Tendencias from './Tendencias/Tendencias'
-const Home = () => {
+const ContentHome = () => {
 
 
     return (
         <div className=" w-5/6 grid grid-cols-le h-full  gap-5 mt-10 ">
             <div className="flex ">
-                <Content></Content>
+               d
             </div>
 
             <div className="flex rounded-md">
@@ -28,5 +28,4 @@ const Home = () => {
 }
 
 
-export default Home
-
+export default ContentHome
