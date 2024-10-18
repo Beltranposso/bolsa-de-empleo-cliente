@@ -1,3 +1,85 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .animate-fade-in-delay {
+    animation: fadeIn 1s ease-out 0.5s both;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out 0.8s both;
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Custom gradient backgrounds */
+  .bg-gradient-to-b {
+    background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  }
+  
+  /* Light mode gradient */
+  .from-blue-green-100 {
+    --tw-gradient-from: #e6f7ff;
+    --tw-gradient-via: #e6fffa;
+    --tw-gradient-to: #f0fff4;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to);
+  }
+  
+  /* Dark mode gradient */
+  .dark .bg-gradient-to-b {
+    --tw-gradient-from: #1a4d66;
+    --tw-gradient-via: #1a664d;
+    --tw-gradient-to: #2d4d3e;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to);
+  }
+  
+  /* Dark mode styles */
+  .dark body {
+    @apply bg-gray-900 text-white;
+  }
+  
+  .dark .bg-white {
+    @apply bg-gray-800;
+  }
+  
+  .dark .text-gray-600 {
+    @apply text-gray-300;
+  }
+  
+  .dark .text-gray-800 {
+    @apply text-white;
+  }
+  
+  .dark .hover\:text-blue-600:hover {
+    @apply text-blue-400;
+  }
+  
+  .dark .bg-blue-600 {
+    @apply bg-blue-500;
+  }
+  
+  .dark .hover\:bg-blue-700:hover {
+    @apply hover:bg-blue-600;
+  }
